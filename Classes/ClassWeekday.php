@@ -14,12 +14,13 @@
 class Weekday
 {
     public $today;
+    public $arrayToday;
+    public $nameToday;
 
     public function __construct()
     {
         $date = getdate();
         $today = $date["wday"];
-        $this->today = $today;
         $arrayToday = [
             "Sunday", 
             "Monday", 
@@ -28,8 +29,12 @@ class Weekday
             "Thursday",
             "Friday",
             "Saturday"];
+        $nameToday = $arrayToday[$today];
+        
+        $this->today = $today;
+        $this->arrayToday = $arrayToday;
+        $this->nameToday = $nameToday;
         //var_dump($arrayToday);
-        echo $arrayToday['2'];
     }
 
     public function setToday($today)
@@ -37,8 +42,11 @@ class Weekday
         $this->today = $today;
     }
     
-    public function getToday($today) 
+    public function getToday() 
     {
-        $this->today = $today;
+        return $this->today;
+    }
+    public function getNameToday() {
+        return $this->nameToday;
     }
 }
