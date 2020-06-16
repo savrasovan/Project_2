@@ -1,10 +1,10 @@
 <?php
 
 define('ROOT', dirname(__FILE__));
-require_once ROOT.'/Classes/ClassWeekday.php';
+require_once ROOT.'/Classes/ControllerWeekday.php';
 
-$object = new Weekday();
-echo $object->today;
-echo $object->getToday();
-echo $object->getNameToday();
+$objControllerWeekday = new ControllerWeekday();
+echo $objControllerWeekday->today;
+echo $objControllerWeekday->getToday();
+echo $controllerWeekday->getNameToday();
 

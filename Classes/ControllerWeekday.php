@@ -11,11 +11,11 @@
  *
  * @author Андрей
  */
-class Weekday
+class ControllerWeekday
 {
-    public $today;
-    public $arrayToday;
-    public $nameToday;
+    private $today;
+    private $arrayToday;
+    private $nameToday;
 
     public function __construct()
     {
@@ -37,16 +37,17 @@ class Weekday
         //var_dump($arrayToday);
     }
 
-    public function setToday($today)
-    {
-        $this->today = $today;
-    }
-    
     public function getToday() 
     {
         return $this->today;
     }
+    
     public function getNameToday() {
         return $this->nameToday;
+    }
+    
+    public function setToday($today)
+    {
+        $this->today = $today;
     }
 }
