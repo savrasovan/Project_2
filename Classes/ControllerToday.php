@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of ClassWeekday
+ * Description of Class ControllerToday
  *
  * @author Андрей
  */
-class ControllerWeekday
+class ControllerToday
 {
     private $today;
     private $arrayToday;
